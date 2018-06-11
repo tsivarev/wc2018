@@ -1,0 +1,49 @@
+.logo {
+    height: 250px;
+    background-image:   url("/images/fifa2018.jpg");
+    background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center center;
+
+}
+
+.eventlist {
+
+}
+
+.eventlist li {
+    border-bottom: 1px dotted #dbdee1;
+}
+
+.eventlist li:last-child {
+    border-bottom: none;
+}
+
+.event {
+    display: flex;
+}
+
+.event_col {
+    flex-grow: 2;
+}
+
+.event__time {
+    color: #AAAEB3;
+    font-size: 0.9rem;
+}
+
+.event__name {
+}
+
+.event__name span {
+    display: block;
+}
+
+.event__name .separator {
+    display: none;
+}
+
+.event__status {
+    text-align: right;
+    font-size: 0.8rem;
+}
