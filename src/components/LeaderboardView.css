@@ -1,0 +1,51 @@
+.leaderboard {
+
+}
+
+.leaderboard li {
+    /*border-bottom: 1px dotted #dbdee1;*/
+}
+
+.leaderboard li:last-child {
+    border-bottom: none;
+}
+
+.leaderboard .row {
+    display: flex;
+}
+
+.leaderboard .teamscore__place {
+    padding-right: 10px;
+    color: #AAAEB3;
+    font-size: 0.9rem;
+}
+
+.leaderboard .teamscore__name {
+    flex-grow: 1;
+}
+
+.leaderboard .teamscore__games {
+    width: 40px;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.leaderboard .teamscore__score {
+    width: 40px;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.leaderboard .teamscore__title__games {
+    width: 40px;
+    color: #AAAEB3;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.leaderboard .teamscore__title__score {
+    width: 40px;
+    color: #AAAEB3;
+    text-align: center;
+    font-size: 0.8rem;
+}

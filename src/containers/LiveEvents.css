@@ -1,0 +1,40 @@
+.live_events {
+
+}
+
+.live_events li {
+    /*border-bottom: 1px dotted #dbdee1;*/
+}
+
+.live_events li:last-child {
+    border-bottom: none;
+}
+
+.live_events .event {
+    display: flex;
+}
+
+.live_events .event_col {
+    flex-grow: 2;
+}
+
+.live_events .event__time {
+    color: #AAAEB3;
+    font-size: 0.9rem;
+}
+
+.live_events .event__name {
+}
+
+.live_events .event__name span {
+    display: block;
+}
+
+.live_events .event__name .separator {
+    display: none;
+}
+
+.live_events .event__status {
+    text-align: right;
+    font-size: 0.8rem;
+}

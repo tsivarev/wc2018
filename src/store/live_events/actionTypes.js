@@ -1,0 +1,1 @@
+export const EVENTS_FETCHED = 'liveEvents.EVENTS_FETCHED';

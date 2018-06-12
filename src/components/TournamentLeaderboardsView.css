@@ -1,49 +1,49 @@
-.teamscorelist {
+.leaderboard {
 
 }
 
-.teamscorelist li {
-    border-bottom: 1px dotted #dbdee1;
+.leaderboard li {
+    /*border-bottom: 1px dotted #dbdee1;*/
 }
 
-.teamscorelist li:last-child {
+.leaderboard li:last-child {
     border-bottom: none;
 }
 
-.teamscore {
+.leaderboard .leaderboard__row {
     display: flex;
 }
 
-.teamscore__place {
+.leaderboard .leaderboard__row__place {
     padding-right: 10px;
     color: #AAAEB3;
     font-size: 0.9rem;
 }
 
-.teamscore__name {
+.leaderboard .leaderboard__row__name {
     flex-grow: 1;
 }
 
-.teamscore__games {
+.leaderboard .leaderboard__row__games {
     width: 40px;
     text-align: center;
     font-size: 0.8rem;
 }
 
-.teamscore__score {
+.leaderboard .leaderboard__row__score {
     width: 40px;
     text-align: center;
     font-size: 0.8rem;
 }
 
-.teamscore__title__games {
+.leaderboard .leaderboard__row__title__games {
     width: 40px;
     color: #AAAEB3;
     text-align: center;
     font-size: 0.8rem;
 }
 
-.teamscore__title__score {
+.leaderboard .leaderboard__row__title__score {
     width: 40px;
     color: #AAAEB3;
     text-align: center;

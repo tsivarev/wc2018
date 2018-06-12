@@ -1,0 +1,7 @@
+.logo {
+    height: 150px;
+    background-image: url("/images/fifa2018.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}

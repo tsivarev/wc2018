@@ -1,0 +1,1 @@
+export const LEADERBOARDS_FETCHED = 'leaderboards.LEADERBOARDS_FETCHED';
