@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
 import _ from 'lodash';
+import {push} from 'react-router-redux'
 import * as UI from '@vkontakte/vkui';
 import './TournamentLeaderboardsView.css';
+import {connect} from "react-redux";
 
-export default class TournamentLeaderboardsView extends Component {
+class TournamentLeaderboardsView extends Component {
 
     render() {
         return (
@@ -28,7 +30,7 @@ export default class TournamentLeaderboardsView extends Component {
                             <div className="leaderboard__row__title__score">Очков</div>
                         </div>
                     </UI.ListItem>
-                    {_.map(table, this.renderGroupRow)}
+                    {_.map(table, this.renderGroupRow.bind(this))}
                 </UI.List>
             </UI.Group>
         );
@@ -36,7 +38,7 @@ export default class TournamentLeaderboardsView extends Component {
 
     renderGroupRow(row) {
         return (
-            <UI.ListItem key={row.team}>
+            <UI.ListItem key={row.team} onClick={() => this.props.changeUrl('/team/' + row.teamId)}>
                 <div className="leaderboard__row">
                     <div className="leaderboard__row__place">{row.place}</div>
                     <div className="leaderboard__row__name">{row.team}</div>
@@ -47,3 +49,17 @@ export default class TournamentLeaderboardsView extends Component {
         );
     }
 }
+
+const mapStateToProps = (state) => {
+    return {}
+};
+
+const mapDispatchToProps = (dispatch, state) => {
+    return {
+        changeUrl: (path) => {
+            dispatch(push(path));
+        }
+    }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(TournamentLeaderboardsView);

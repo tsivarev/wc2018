@@ -8,8 +8,13 @@ import * as UI from '@vkontakte/vkui';
 import '@vkontakte/vkui/dist/vkui.css';
 
 class LiveEvents extends Component {
+    update() {
+        this.props.dispatch(liveEventsActions.fetchEvents());
+    }
+
     componentDidMount() {
-        this.interval = setInterval(() => this.props.dispatch(liveEventsActions.fetchEvents()), 5000);
+        this.update();
+        this.interval = setInterval(() => this.update(), 5000);
     }
 
     componentWillUnmount() {

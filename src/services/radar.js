@@ -1,18 +1,9 @@
 class RadarService {
-    checkTime(i) {
-        return (i < 10) ? "0" + i : i;
-    }
-
     async getLiveEvents() {
-        var today = new Date();
-        var h = this.checkTime(today.getHours());
-        var m = this.checkTime(today.getMinutes());
-        var s = this.checkTime(today.getSeconds());
-
         return [
             {
                 'id': 1,
-                'time': h + ':' + m + ':' + s,
+                'time': '18:30',
                 'team_a': 'Россия',
                 'team_b': 'Германия',
                 'status': '1:0',
@@ -53,29 +44,33 @@ class RadarService {
     async getGroupLeaderboards() {
         return [
             {
-                'group': 'C',
+                'group': 'A',
                 'table': [
                     {
                         'place': 1,
                         'team': 'Россия',
+                        'teamId': 'russia',
                         'score': 3,
                         'games': 1,
                     },
                     {
                         'place': 2,
                         'team': 'Египет',
+                        'teamId': 'russia',
                         'score': 3,
                         'games': 1,
                     },
                     {
                         'place': 3,
                         'team': 'Уругвай',
+                        'teamId': 'russia',
                         'score': 0,
                         'games': 1,
                     },
                     {
                         'place': 4,
                         'team': 'Саудовская Аравия',
+                        'teamId': 'russia',
                         'score': 0,
                         'games': 1,
                     },
@@ -87,24 +82,28 @@ class RadarService {
                     {
                         'place': 1,
                         'team': 'Россия',
+                        'teamId': 'russia',
                         'score': 3,
                         'games': 1,
                     },
                     {
                         'place': 2,
                         'team': 'Египет',
+                        'teamId': 'russia',
                         'score': 3,
                         'games': 1,
                     },
                     {
                         'place': 3,
                         'team': 'Уругвай',
+                        'teamId': 'russia',
                         'score': 0,
                         'games': 1,
                     },
                     {
                         'place': 4,
                         'team': 'Саудовская Аравия',
+                        'teamId': 'russia',
                         'score': 0,
                         'games': 1,
                     },
