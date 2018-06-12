@@ -1,0 +1,15 @@
+.team {
+
+}
+
+.team .logo {
+    height: 200px;
+    background-image: url("/images/flags/rus.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.players .ListItem__before {
+    width: 30px;
+}

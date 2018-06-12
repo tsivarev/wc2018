@@ -111,6 +111,39 @@ class RadarService {
             }
         ];
     }
+
+    async getTeams() {
+        return [
+            {
+                'id': 'russia',
+                'name': 'Россия',
+                'group': 'A',
+                'players': [
+                    {
+                        'first_name': 'Игорь',
+                        'last_name': 'Акинфеев',
+                        'number': 1,
+                        'role': 'Вратарь',
+                        'image': 'http://www.footballrussia.ru/uploads/posts/2016-02/1456418315_akinfeev.jpg'
+                    },
+                    {
+                        'first_name': 'Игорь',
+                        'last_name': 'Акинфеев',
+                        'number': 1,
+                        'role': 'Вратарь',
+                        'image': 'http://www.footballrussia.ru/uploads/posts/2016-02/1456418315_akinfeev.jpg'
+                    },
+                    {
+                        'first_name': 'Игорь',
+                        'last_name': 'Акинфеев',
+                        'number': 1,
+                        'role': 'Вратарь',
+                        'image': 'http://www.footballrussia.ru/uploads/posts/2016-02/1456418315_akinfeev.jpg'
+                    }
+                ]
+            }
+        ];
+    }
 }
 
 export default new RadarService();

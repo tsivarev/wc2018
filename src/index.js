@@ -31,7 +31,7 @@ ReactDOM.render(
         <ConnectedRouter history={history}>
             <div>
                 <Route exact path="/" component={App}/>
-                <Route exact path="/team" component={Team}/>
+                <Route exact path="/team/:id" component={Team}/>
             </div>
         </ConnectedRouter>
     </Provider>,
