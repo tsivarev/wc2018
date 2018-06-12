@@ -6,11 +6,14 @@ import * as playersAction from "../store/players/actions";
 import {connect} from "react-redux";
 import * as playersSelectors from "../store/players/reducer";
 import _ from "lodash";
+import LeaderboardView from "../components/LeaderboardView";
+import * as leaderboardsSelectors from "../store/leaderboards/reducer";
+import * as leaderboardsActions from "../store/leaderboards/actions";
 
 class Team extends React.Component {
     constructor(props) {
         super(props);
-        this.teamName = this.props.match.params.id;
+        this.teamId = this.props.match.params.id;
         this.state = {
             activePanel: 'panel',
             activeView: 'mainView'
@@ -18,11 +21,17 @@ class Team extends React.Component {
     }
 
     componentDidMount() {
+        this.props.dispatch(leaderboardsActions.fetchLeaderboards());
         this.props.dispatch(playersAction.fetchTeams());
     }
 
     render() {
-        let players = this.props.rowsById ? this.props.rowsById[this.teamName].players : [];
+        let team = this.props.rowsById ? this.props.rowsById[this.teamId] : null;
+        let players = team ? team.players : [];
+        let group = team ? team.group : null;
+        let groupName = 'Группа ' + group;
+        let table = group && this.props.leaderboardsById ? this.props.leaderboardsById[group].table : [];
+
         return (
             <UI.Root activeView={this.state.activeView}>
                 <UI.View id="mainView" activePanel={this.state.activePanel} header={false}>
@@ -33,6 +42,8 @@ class Team extends React.Component {
                                 {_.map(players, this.renderRow.bind(this))}
                             </UI.List>
                         </UI.Group>
+
+                        <LeaderboardView title={groupName} table={table}/>
                     </UI.Panel>
                 </UI.View>
             </UI.Root>
@@ -60,6 +71,7 @@ function mapStateToProps(state) {
     return {
         rowsIdArray: playersSelectors.getTeamsArray(state),
         rowsById: playersSelectors.getTeamsById(state),
+        leaderboardsById: leaderboardsSelectors.getLeaderboardByGroup(state),
     };
 }
 
