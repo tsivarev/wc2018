@@ -1,9 +1,18 @@
 class RadarService {
+    checkTime(i) {
+        return (i < 10) ? "0" + i : i;
+    }
+
     async getLiveEvents() {
+        var today = new Date();
+        var h = this.checkTime(today.getHours());
+        var m = this.checkTime(today.getMinutes());
+        var s = this.checkTime(today.getSeconds());
+
         return [
             {
                 'id': 1,
-                'time': '18:30',
+                'time': h + ':' + m + ':' + s,
                 'team_a': 'Россия',
                 'team_b': 'Германия',
                 'status': '1:0',
