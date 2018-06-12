@@ -2,9 +2,8 @@ import React from 'react';
 import * as UI from '@vkontakte/vkui';
 import '@vkontakte/vkui/dist/vkui.css';
 import './App.css';
-import './components/LeaderboardView.css';
 import LiveEvents from "./containers/LiveEvents";
-import Leaderboards from "./containers/GroupLeaderboards";
+import GroupLeaderboards from "./containers/GroupLeaderboards";
 
 export default class App extends React.Component {
     constructor(props) {
@@ -33,7 +32,7 @@ export default class App extends React.Component {
                             Турнирная таблица
                         </UI.Header>
 
-                        <Leaderboards/>
+                        <GroupLeaderboards/>
 
                     </UI.Panel>
                 </UI.View>

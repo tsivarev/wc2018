@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import '../components/LeaderboardView.css';
 import * as leaderboardsActions from '../store/leaderboards/actions';
 import * as leaderboardsSelectors from '../store/leaderboards/reducer';
 import '@vkontakte/vkui/dist/vkui.css';
